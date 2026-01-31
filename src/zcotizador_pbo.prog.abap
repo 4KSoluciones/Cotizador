@@ -252,7 +252,11 @@ MODULE status_0400 OUTPUT.
 
 * PONEMOS POR DEFAULT pero lo pueden cambiar por pantalla
   v_rb_prepago = 'X'.
+<<<<<<< HEAD
   v_auart      = 'ZPP3'." ZPP3
+=======
+  v_auart      = 'ZPP3'.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
   v_vkorg      = '1000'.
   v_vtweg      = 'VS'.
   v_spart      = 'R0'.

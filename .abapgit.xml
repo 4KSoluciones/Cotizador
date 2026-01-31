@@ -2,7 +2,10 @@
 <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
  <asx:values>
   <DATA>
+<<<<<<< HEAD
    <NAME>Z4K_COTIZADOR_V1</NAME>
+=======
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
    <MASTER_LANGUAGE>S</MASTER_LANGUAGE>
    <STARTING_FOLDER>/src/</STARTING_FOLDER>
    <FOLDER_LOGIC>PREFIX</FOLDER_LOGIC>

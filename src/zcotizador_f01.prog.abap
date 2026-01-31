@@ -4247,6 +4247,7 @@ FORM user_command_oc USING pv_ucomm    LIKE sy-ucomm
 
 ENDFORM.                    " USER_COMMAND_OC
 
+<<<<<<< HEAD
 *&---------------------------------------------------------------------*
 *&      Form  F_CREAR_ORDEN_COMPRA
 *&---------------------------------------------------------------------*
@@ -4257,6 +4258,12 @@ ENDFORM.                    " USER_COMMAND_OC
 *  Flujo: SO (con item_categ TAS) → PR automática (VBEP) → OC (BAPI)
 *         → VBFA actualizado automáticamente
 *----------------------------------------------------------------------*
+=======
+
+*&---------------------------------------------------------------------*
+*&      Form  F_CREAR_ORDEN_COMPRA
+*&---------------------------------------------------------------------*
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
 FORM f_crear_orden_compra.
 
   DATA: lw_header            TYPE bapimepoheader,
@@ -4283,6 +4290,7 @@ FORM f_crear_orden_compra.
         lv_tabix             TYPE sy-tabix,
         lv_intervalo         TYPE ztpauta_save-intervalo_mine.
 
+<<<<<<< HEAD
 * Variables para la Solicitud de Pedido automática
   DATA: lv_banfn     TYPE banfn,        " Número de Solped
         lv_bnfpo     TYPE bnfpo,        " Posición de Solped
@@ -4291,6 +4299,11 @@ FORM f_crear_orden_compra.
   FIELD-SYMBOLS <fs_alvoc> TYPE zst_ocalv.
 
   CLEAR: wa_cotizacion, lv_pr_found.
+=======
+  FIELD-SYMBOLS <fs_alvoc> TYPE zst_ocalv.
+
+  CLEAR wa_cotizacion.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
 
   READ TABLE gt_alvoc ASSIGNING <fs_alvoc>
     WITH KEY sel = 'X'.
@@ -4324,6 +4337,7 @@ FORM f_crear_orden_compra.
   ENDIF.
 
 
+<<<<<<< HEAD
 *----------------------------------------------------------------------*
 * HEADER OC
 *----------------------------------------------------------------------*
@@ -4334,6 +4348,16 @@ FORM f_crear_orden_compra.
   lw_header-purch_org  = v_oc_ekorg.
   lw_header-pur_group  = v_oc_bkgrp.
   lw_header-currency   = v_oc_waers.
+=======
+
+  lw_header-comp_code  = v_oc_bukrs. "'1000'.
+  lw_header-doc_type   = v_oc_esart. "'ZPP3'.
+  lw_header-creat_date = sy-datum.
+  lw_header-vendor     = v_oc_elifn. "'RSA0'.
+  lw_header-purch_org  = v_oc_ekorg. "'1000'.
+  lw_header-pur_group  = v_oc_bkgrp. "'107'.
+  lw_header-currency   = v_oc_waers. "'CLP'.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
   lw_header-doc_date   = sy-datum.
 
   lw_headerx-comp_code  = c_mark.
@@ -4346,16 +4370,25 @@ FORM f_crear_orden_compra.
   lw_headerx-doc_date   = c_mark.
 
 
+<<<<<<< HEAD
 *----------------------------------------------------------------------*
 * ITEMS OC
 *----------------------------------------------------------------------*
   lv_glaccount = v_oc_saknr.
+=======
+* ITEMS
+
+  lv_glaccount = v_oc_saknr. "'0021110018'.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
 
   READ TABLE gt_intervalos INTO DATA(lw_intervalos)
     WITH KEY nro_cotiz = <fs_alvoc>-nro_cotiz
              version   = <fs_alvoc>-version
              intervalo = <fs_alvoc>-intervalo.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
   IF sy-subrc NE 0.
     CALL FUNCTION 'CONVERSION_EXIT_ALPHA_OUTPUT'
       EXPORTING
@@ -4374,7 +4407,10 @@ FORM f_crear_orden_compra.
 
     lv_tabix = sy-tabix.
 
+<<<<<<< HEAD
 *   Buscar datos del Sales Order
+=======
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
     SELECT SINGLE *
       FROM vbak
       INTO @DATA(lw_vbak)
@@ -4387,7 +4423,11 @@ FORM f_crear_orden_compra.
        WHERE vkbur = @lw_vbak-vkbur.
     ENDIF.
 
+<<<<<<< HEAD
 *   Buscar posición del Sales Order
+=======
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
     SELECT SINGLE *
       FROM vbap
       INTO @DATA(lw_vbap)
@@ -4396,6 +4436,7 @@ FORM f_crear_orden_compra.
 
     IF sy-subrc = 0.
 
+<<<<<<< HEAD
 *----------------------------------------------------------------------*
 * PASO CLAVE: Buscar la Solicitud de Pedido automática en VBEP
 * El tipo de posición TAS genera automáticamente una PR que se
@@ -4437,6 +4478,14 @@ FORM f_crear_orden_compra.
       CLEAR: lw_item, lw_itemx, lw_poaccount, lw_poaccountx, lv_quantity.
 
       ADD 10 TO lv_pos.
+=======
+      DATA lv_preq_item TYPE vbap-posnr.
+      CLEAR: lw_item, lw_itemx, lw_poaccount, lw_poaccountx, lv_quantity.
+
+      lv_preq_item = lw_vbap-posnr.
+      ADD 10 TO lv_pos.
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       lv_quantity = lw_vbap-kwmeng.
 
       lw_item-po_item     = lv_pos.
@@ -4446,12 +4495,20 @@ FORM f_crear_orden_compra.
       lw_item-quantity    = lv_quantity.
       lw_item-net_price   = lw_vbap-netwr.
       lw_item-plant       = lw_centro-werks.
+<<<<<<< HEAD
       lw_item-tax_code    = v_oc_mwskz.
 
 *     *** REFERENCIA A LA SOLICITUD DE PEDIDO AUTOMÁTICA ***
       lw_item-preq_no     = lv_banfn.     " Número de Solped
       lw_item-preq_item   = lw_vbap-posnr.     " Posición de Solped = pos sales order
 
+=======
+      lw_item-tax_code    = v_oc_mwskz. "'C4'.
+      lw_item-ref_doc     = lw_vbap-vbeln.
+      lw_item-ref_item    = lv_preq_item.
+*      lw_item-preq_no     = lw_vbap-vbeln.
+*      lw_item-preq_item   = lv_preq_item.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       APPEND lw_item TO lt_item.
 
       lw_itemx-po_item    = lv_pos.
@@ -4462,6 +4519,7 @@ FORM f_crear_orden_compra.
       lw_itemx-net_price  = c_mark.
       lw_itemx-plant      = c_mark.
       lw_itemx-tax_code   = c_mark.
+<<<<<<< HEAD
       lw_itemx-preq_no    = c_mark.       " Flag para Solped
       lw_itemx-preq_item  = c_mark.       " Flag para Solped
 
@@ -4473,21 +4531,37 @@ FORM f_crear_orden_compra.
 *     Vincular con Sales Order para EKKN
       lw_poaccount-sd_doc     = lw_vbap-vbeln.  " Sales Order
       lw_poaccount-itm_number = lw_vbap-posnr.  " Posición SO
+=======
+      lw_itemx-ref_doc    = c_mark.
+      lw_itemx-ref_item   = c_mark.
+*      lw_itemx-preq_no    = lw_vbap-vbeln.
+*      lw_itemx-preq_item  = lv_preq_item.
+      APPEND lw_itemx TO lt_itemx.
+
+      lw_poaccount-po_item    = lv_pos.
+      lw_poaccount-gl_account = lv_glaccount. "Cuenta de Mayor
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       APPEND lw_poaccount TO lt_poaccount.
 
       lw_poaccountx-po_item    = lv_pos.
       lw_poaccountx-gl_account = c_mark.
+<<<<<<< HEAD
       lw_poaccountx-sd_doc     = c_mark.
       lw_poaccountx-itm_number = c_mark.
       APPEND lw_poaccountx TO lt_poaccountx.
 
 *     Schedule
+=======
+      APPEND lw_poaccountx TO lt_poaccountx.
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       lw_bapimeposchedule-po_item       = lv_pos.
       lw_bapimeposchedule-delivery_date = sy-datum.
       APPEND lw_bapimeposchedule TO lt_bapimeposchedule.
 
       lw_bapimeposchedulex-po_item       = lv_pos.
       lw_bapimeposchedulex-delivery_date = c_mark.
+<<<<<<< HEAD
       APPEND lw_bapimeposchedulex TO lt_bapimeposchedulex.
 
     ENDIF.
@@ -4495,6 +4569,12 @@ FORM f_crear_orden_compra.
 *----------------------------------------------------------------------*
 * Items adicionales de la pauta (materiales adicionales)
 *----------------------------------------------------------------------*
+=======
+      APPEND lw_bapimeposchedule TO lt_bapimeposchedule.
+
+    ENDIF.
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
     LOOP AT lt_pautasave INTO DATA(lw_pautasave).
 
       CLEAR: lw_item, lw_itemx, lw_poaccount, lw_poaccountx.
@@ -4506,10 +4586,15 @@ FORM f_crear_orden_compra.
       lw_item-short_text  = lw_pautasave-descripcion_mat.
       lw_item-quantity    = lw_pautasave-cantidad.
       lw_item-net_price   = lw_pautasave-precio_final.
+<<<<<<< HEAD
       lw_item-plant       = lw_centro-werks.
       lw_item-tax_code    = v_oc_mwskz.
 *     Estos items adicionales NO llevan referencia a PR
 *     ya que no vienen del Sales Order
+=======
+      lw_item-plant       = lw_centro-werks. "lw_pautasave-werksoc.
+      lw_item-tax_code    = v_oc_mwskz. "'C4'.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       APPEND lw_item TO lt_item.
 
       lw_itemx-po_item    = lv_pos.
@@ -4523,7 +4608,11 @@ FORM f_crear_orden_compra.
       APPEND lw_itemx TO lt_itemx.
 
       lw_poaccount-po_item    = lv_pos.
+<<<<<<< HEAD
       lw_poaccount-gl_account = lv_glaccount.
+=======
+      lw_poaccount-gl_account = lv_glaccount. "Cuenta de Mayor
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       APPEND lw_poaccount TO lt_poaccount.
 
       lw_poaccountx-po_item    = lv_pos.
@@ -4536,12 +4625,17 @@ FORM f_crear_orden_compra.
 
       lw_bapimeposchedulex-po_item       = lv_pos.
       lw_bapimeposchedulex-delivery_date = c_mark.
+<<<<<<< HEAD
       APPEND lw_bapimeposchedulex TO lt_bapimeposchedulex.
+=======
+      APPEND lw_bapimeposchedule TO lt_bapimeposchedule.
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
 
     ENDLOOP.
 
   ENDIF.
 
+<<<<<<< HEAD
 
 *----------------------------------------------------------------------*
 * Crear Orden de Compra
@@ -4549,6 +4643,10 @@ FORM f_crear_orden_compra.
   IF lt_item[] IS NOT INITIAL.
 
 *   Test run primero
+=======
+  IF lt_item[] IS NOT INITIAL.
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
     CALL FUNCTION 'BAPI_PO_CREATE1'
       EXPORTING
         poheader         = lw_header
@@ -4571,13 +4669,20 @@ FORM f_crear_orden_compra.
     WITH KEY type = 'E'.
 
   IF sy-subrc = 0.
+<<<<<<< HEAD
 *   Errores en test run
+=======
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
     APPEND LINES OF lt_return TO lt_bapiret2.
     DELETE lt_bapiret2 WHERE type NE 'E'.
 
   ELSE.
+<<<<<<< HEAD
 *   Test OK - Crear en productivo
     CLEAR: lt_return, lv_ebeln.
+=======
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
 
     CALL FUNCTION 'BAPI_PO_CREATE1'
       EXPORTING
@@ -4599,6 +4704,7 @@ FORM f_crear_orden_compra.
       WITH KEY type = 'E'.
 
     IF sy-subrc = 0.
+<<<<<<< HEAD
 *     Error en creación real
       CALL FUNCTION 'BAPI_TRANSACTION_ROLLBACK'.
 
@@ -4613,11 +4719,21 @@ FORM f_crear_orden_compra.
 
     ELSE.
 *     Éxito - Commit y actualizar tablas
+=======
+
+      CALL FUNCTION 'BAPI_TRANSACTION_ROLLBACK'.
+
+      APPEND LINES OF lt_return TO lt_bapiret2.
+
+    ELSE.
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       CALL FUNCTION 'BAPI_TRANSACTION_COMMIT'
         EXPORTING
           wait = c_mark.
 
       REFRESH lt_bapiret2.
+<<<<<<< HEAD
 
 *     Mensaje de éxito con info de Document Flow
       CLEAR lw_bapiret2.
@@ -4640,11 +4756,24 @@ FORM f_crear_orden_compra.
       APPEND lw_bapiret2 TO lt_bapiret2.
 
 *     Actualizar tabla Z con número de OC
+=======
+      CLEAR lw_bapiret2.
+      lw_bapiret2-type       = 'S'.
+      lw_bapiret2-id         = 'ZSD'.
+      lw_bapiret2-number     = 035.
+      lw_bapiret2-message_v1 = TEXT-005.   " 'Se creó la Orden de Compra'.
+      lw_bapiret2-message_v2 = lv_ebeln.
+      APPEND lw_bapiret2 TO lt_bapiret2.
+
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
       lw_intervalos-ebeln = lv_ebeln.
       MODIFY gt_intervalos FROM lw_intervalos INDEX lv_tabix.
       MODIFY ztcoti_intervalo FROM lw_intervalos.
       <fs_alvoc>-ebeln = lv_ebeln.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
     ENDIF.
 
   ENDIF.
@@ -4658,9 +4787,12 @@ FORM f_crear_orden_compra.
 ENDFORM.
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 8f59dcd95f4936d4b88bac84da007d60761edb8c
 *&---------------------------------------------------------------------*
 *&      Form  F_OBTENER_VARIABLES
 *&---------------------------------------------------------------------*
