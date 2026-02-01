@@ -1,0 +1,24 @@
+TYPES: ZTTEXTO TYPE STANDARD TABLE OF ZTEXTOS_FIJOS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

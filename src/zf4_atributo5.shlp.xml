@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SHLP" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD30V>
+    <SHLPNAME>ZF4_ATRIBUTO5</SHLPNAME>
+    <DDLANGUAGE>S</DDLANGUAGE>
+    <DDTEXT>Ayuda busqueda atributo5</DDTEXT>
+    <ISSIMPLE>X</ISSIMPLE>
+    <SELMETHOD>ZATRIBUTO5</SELMETHOD>
+    <SELMTYPE>T</SELMTYPE>
+    <DIALOGTYPE>D</DIALOGTYPE>
+    <FUZZY_SIMILARITY>0.8</FUZZY_SIMILARITY>
+   </DD30V>
+   <DD32P_TABLE>
+    <DD32P>
+     <SHLPNAME>ZF4_ATRIBUTO5</SHLPNAME>
+     <FIELDNAME>ATRIBUTO5</FIELDNAME>
+     <FLPOSITION>0001</FLPOSITION>
+     <ROLLNAME>ZED_ATRIBUTO5</ROLLNAME>
+     <SHLPINPUT>X</SHLPINPUT>
+     <SHLPOUTPUT>X</SHLPOUTPUT>
+     <SHLPSELPOS>01</SHLPSELPOS>
+     <SHLPSELDIS>X</SHLPSELDIS>
+     <SHLPLISPOS>01</SHLPLISPOS>
+     <SCRLEN3>10</SCRLEN3>
+    </DD32P>
+   </DD32P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

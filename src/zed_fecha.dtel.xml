@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZED_FECHA</ROLLNAME>
+    <DDLANGUAGE>S</DDLANGUAGE>
+    <DOMNAME>DATUM</DOMNAME>
+    <MEMORYID>ZFEC</MEMORYID>
+    <HEADLEN>05</HEADLEN>
+    <SCRLEN1>05</SCRLEN1>
+    <SCRLEN2>05</SCRLEN2>
+    <SCRLEN3>05</SCRLEN3>
+    <DDTEXT>Fecha</DDTEXT>
+    <REPTEXT>Fecha</REPTEXT>
+    <SCRTEXT_S>Fecha</SCRTEXT_S>
+    <SCRTEXT_M>Fecha</SCRTEXT_M>
+    <SCRTEXT_L>Fecha</SCRTEXT_L>
+    <DTELMASTER>S</DTELMASTER>
+    <SHLPNAME>ZSH_FECHA</SHLPNAME>
+    <SHLPFIELD>FECHA</SHLPFIELD>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZED_ATRIBUTO2</ROLLNAME>
+    <DDLANGUAGE>S</DDLANGUAGE>
+    <DOMNAME>CHAR30</DOMNAME>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>10</SCRLEN2>
+    <SCRLEN3>10</SCRLEN3>
+    <DDTEXT>Atributo 2</DDTEXT>
+    <REPTEXT>Atributo 2</REPTEXT>
+    <SCRTEXT_S>Atributo 2</SCRTEXT_S>
+    <SCRTEXT_M>Atributo 2</SCRTEXT_M>
+    <SCRTEXT_L>Atributo 2</SCRTEXT_L>
+    <DTELMASTER>S</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

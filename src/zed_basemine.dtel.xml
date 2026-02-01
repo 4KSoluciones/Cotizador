@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZED_BASEMINE</ROLLNAME>
+    <DDLANGUAGE>S</DDLANGUAGE>
+    <HEADLEN>21</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>21</SCRLEN3>
+    <DDTEXT>Intervalo</DDTEXT>
+    <REPTEXT>Intervalo</REPTEXT>
+    <SCRTEXT_S>Intervalo</SCRTEXT_S>
+    <SCRTEXT_M>Intervalo</SCRTEXT_M>
+    <SCRTEXT_L>Intervalo</SCRTEXT_L>
+    <DTELMASTER>S</DTELMASTER>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000010</OUTPUTLEN>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>
