@@ -37,6 +37,7 @@ FORM f_pauta_variables_importes.
   IF gt_pauta IS NOT INITIAL.
 
 *    PERFORM f_obtener_variables.
+<<<<<<< HEAD
 
 *   >>> NUEVO: Descartar intervalos excluidos (ZTPARAM_COTSERV)
     READ TABLE gt_param INTO DATA(lw_interv_excl)
@@ -56,6 +57,8 @@ FORM f_pauta_variables_importes.
       ENDIF.
     ENDIF.
 *   <<< FIN NUEVO
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
     PERFORM f_importe_repuestos.
     PERFORM f_importe_implubri.
 
@@ -1691,6 +1694,7 @@ FORM f_obtener_formula .
     lw_cotizacion-lugar        = wa_screen1-lugar.
     lw_cotizacion-caja         = wa_screen1-caja.
     lw_cotizacion-diferencial  = wa_screen1-diferencial.
+<<<<<<< HEAD
 
     lw_cotizacion-milajustado  = lv_prepago1_acum.
     lw_cotizacion-cuatromajust = lv_prepago2_acum.
@@ -1704,6 +1708,15 @@ FORM f_obtener_formula .
     lw_cotizacion-direccion    = lw_kna1-stras.
     lw_cotizacion-mail         = lv_smtp_addr.
     lw_cotizacion-vin          = v_vin.    " TICKET-01: VIN para SmartForm
+=======
+    lw_cotizacion-prepago1     = lv_prepago1_acum.
+    lw_cotizacion-prepago2     = lv_prepago2_acum.
+    lw_cotizacion-prepago3     = lv_prepago3_acum.
+    lw_cotizacion-prepago4     = lv_prepago4_acum.
+    lw_cotizacion-name1        = lw_kna1-name1.
+    lw_cotizacion-direccion    = lw_kna1-stras.
+    lw_cotizacion-mail         = lv_smtp_addr.
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
     lw_cotizacion-desc_client1 = lw_desc_cli-valor1.
     lw_cotizacion-desc_client2 = lw_desc_cli-valor2.
     lw_cotizacion-desc_client3 = lw_desc_cli-valor3.
@@ -3773,7 +3786,11 @@ FORM f_imprimir_formulario .
 
   CALL FUNCTION 'SSF_FUNCTION_MODULE_NAME'
     EXPORTING
+<<<<<<< HEAD
       formname           = 'ZFCOTIZADOR'  "'ZFCOTIZADOR'  "
+=======
+      formname           = 'ZFCOTIZADOR_TEST'  "'ZFCOTIZADOR'  "
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
 *     VARIANT            = ' '
 *     DIRECT_CALL        = ' '
     IMPORTING

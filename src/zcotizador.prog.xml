@@ -1165,7 +1165,11 @@
       <TYPE>M</TYPE>
       <NEXTSCREEN>0600</NEXTSCREEN>
       <LINES>013</LINES>
+<<<<<<< HEAD
       <COLUMNS>049</COLUMNS>
+=======
+      <COLUMNS>048</COLUMNS>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
      </HEADER>
      <CONTAINERS>
       <RPY_DYCATT>
@@ -1251,11 +1255,19 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>TEXT</TYPE>
        <NAME>TXT_ELIFMN</NAME>
+<<<<<<< HEAD
        <TEXT>Proveedor</TEXT>
        <LINE>005</LINE>
        <COLUMN>003</COLUMN>
        <LENGTH>009</LENGTH>
        <VISLENGTH>009</VISLENGTH>
+=======
+       <TEXT>Vendor</TEXT>
+       <LINE>005</LINE>
+       <COLUMN>003</COLUMN>
+       <LENGTH>006</LENGTH>
+       <VISLENGTH>006</VISLENGTH>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <REQU_ENTRY>N</REQU_ENTRY>
@@ -1478,7 +1490,11 @@
       <TYPE>N</TYPE>
       <NEXTSCREEN>9000</NEXTSCREEN>
       <LINES>030</LINES>
+<<<<<<< HEAD
       <COLUMNS>143</COLUMNS>
+=======
+      <COLUMNS>142</COLUMNS>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       <HOLD_DATA>X</HOLD_DATA>
      </HEADER>
      <CONTAINERS>
@@ -2113,7 +2129,11 @@
        <CONT_NAME>SCREEN</CONT_NAME>
        <TYPE>CHECK</TYPE>
        <NAME>WA_SCREEN1-CHK_TEL</NAME>
+<<<<<<< HEAD
        <TEXT>Telemetría</TEXT>
+=======
+       <TEXT>_Telemtría</TEXT>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
        <LINE>024</LINE>
        <COLUMN>007</COLUMN>
        <LENGTH>012</LENGTH>

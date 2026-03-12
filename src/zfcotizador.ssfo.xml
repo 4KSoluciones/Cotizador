@@ -231,11 +231,14 @@
     <TYPING>TYPE</TYPING>
     <TYPENAME>ZED_POS</TYPENAME>
    </item>
+<<<<<<< HEAD
    <item>
     <NAME>V_TEXTO</NAME>
     <TYPING>TYPE</TYPING>
     <TYPENAME>STRING</TYPENAME>
    </item>
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
   </GDATA>
   <sf:VARHEADER>
    <sf:item>
@@ -1206,7 +1209,14 @@
                         <TEXT>
                          <item>
                           <TDFORMAT>P2</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>,,,,&lt;C5&gt;Cotización Kit de Mantenimiento: &amp;wa_cotizacion-nro_cotiz&amp; &lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>,,,,&lt;C5&gt;Cotización Plan de Mantenimiento Camiones:</TDLINE>
+                         </item>
+                         <item>
+                          <TDLINE>&amp;wa_cotizacion-nro_cotiz&amp;&lt;C5&gt;&lt;C5&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -1232,7 +1242,19 @@
                           <INAME>%TEXT1</INAME>
                           <LINENR>000001</LINENR>
                           <TDFORMAT>P2</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>,,,,&lt;C5&gt;Cotización Kit de Mantenimiento: &amp;wa_cotizacion-nro_cotiz&amp; &lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>,,,,&lt;C5&gt;Cotización Plan de Mantenimiento Camiones:</TDLINE>
+                         </item>
+                         <item>
+                          <SPRAS>S</SPRAS>
+                          <TXTYPE>F</TXTYPE>
+                          <FORMNAME>ZFCOTIZADOR</FORMNAME>
+                          <INAME>%TEXT1</INAME>
+                          <LINENR>000002</LINENR>
+                          <TDLINE>&amp;wa_cotizacion-nro_cotiz&amp;&lt;C5&gt;&lt;C5&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </T_TEXT>
                        </sf:TEXT>
@@ -4514,6 +4536,7 @@
                       <sf:OBJ>
                        <sf:TEXT>
                         <NAME>
+<<<<<<< HEAD
                          <INAME>DATO_VIN</INAME>
                         </NAME>
                         <CAPTION>VIN</CAPTION>
@@ -4629,6 +4652,8 @@
                       <sf:OBJ>
                        <sf:TEXT>
                         <NAME>
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          <INAME>HS_ANUAL</INAME>
                         </NAME>
                         <APPMODE>P</APPMODE>
@@ -5177,7 +5202,11 @@
                          <INAME>%OUTATTRIB145</INAME>
                         </NAME>
                         <T_LINENR>005</T_LINENR>
+<<<<<<< HEAD
                         <T_CELLNR>002</T_CELLNR>
+=======
+                        <T_CELLNR>004</T_CELLNR>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                         <U_WFRAME>PT</U_WFRAME>
                         <U_WBOXV>CM</U_WBOXV>
                         <U_WBOXH>CM</U_WBOXH>
@@ -6684,11 +6713,18 @@
                         <NAME>
                          <INAME>DATO_DIST</INAME>
                         </NAME>
+<<<<<<< HEAD
+=======
+                        <NOLANGUAGE>X</NOLANGUAGE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                         <APPMODE>P</APPMODE>
                         <TEXT>
                          <item>
                           <TDFORMAT>*</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>&lt;(&gt;&amp;&lt;)&gt;wa_cotizacion-traslado_km&amp; Km</TDLINE>
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -6705,6 +6741,7 @@
                           <INAME>DATO_DIST</INAME>
                          </item>
                         </T_CAPTION>
+<<<<<<< HEAD
                         <T_TEXT>
                          <item>
                           <SPRAS>S</SPRAS>
@@ -6716,6 +6753,8 @@
                           <TDLINE>&lt;(&gt;&amp;&lt;)&gt;wa_cotizacion-traslado_km&amp; Km</TDLINE>
                          </item>
                         </T_TEXT>
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                        </sf:TEXT>
                       </sf:OBJ>
                       <sf:SUCC/>
@@ -17631,6 +17670,7 @@
                      </T_CAPTION>
                     </sf:SECTION>
                    </sf:OBJ>
+<<<<<<< HEAD
                    <sf:COND>
                     <sf:CONDITION>
                      <NAME>
@@ -17656,6 +17696,8 @@
                      </T_CAPTION>
                     </sf:CONDITION>
                    </sf:COND>
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                    <sf:SUCC>
                     <sf:item>
                      <sf:NODE>
@@ -24279,7 +24321,15 @@
                          </item>
                          <item>
                           <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>&lt;C7&gt; &lt;769&gt; : Si Considera&lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>&lt;C7&gt; &lt;769&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt; : Si Considera&lt;/&gt;</TDLINE>
+                         </item>
+                         <item>
+                          <TDFORMAT>=</TDFORMAT>
+                          <TDLINE>&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -24314,7 +24364,20 @@
                           <INAME>CONSIDERA</INAME>
                           <LINENR>000002</LINENR>
                           <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>&lt;C7&gt; &lt;769&gt; : Si Considera&lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>&lt;C7&gt; &lt;769&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt; : Si Considera&lt;/&gt;</TDLINE>
+                         </item>
+                         <item>
+                          <SPRAS>S</SPRAS>
+                          <TXTYPE>F</TXTYPE>
+                          <FORMNAME>ZFCOTIZADOR</FORMNAME>
+                          <INAME>CONSIDERA</INAME>
+                          <LINENR>000003</LINENR>
+                          <TDFORMAT>=</TDFORMAT>
+                          <TDLINE>&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </T_TEXT>
                        </sf:TEXT>
@@ -24393,6 +24456,7 @@
                         </T_CAPTION>
                        </sf:OUTATTR>
                       </sf:OUTATTR>
+<<<<<<< HEAD
                       <sf:COND>
                        <sf:CONDITION>
                         <NAME>
@@ -24418,6 +24482,8 @@
                         </T_CAPTION>
                        </sf:CONDITION>
                       </sf:COND>
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                       <sf:SUCC/>
                      </sf:NODE>
                     </sf:item>
@@ -24634,6 +24700,7 @@
                           <OUTIN>I</OUTIN>
                          </item>
                          <item>
+<<<<<<< HEAD
                           <OPD>V_TEXTO</OPD>
                           <OUTIN>I</OUTIN>
                          </item>
@@ -24649,6 +24716,11 @@
                           <OPD>V_TEXTO</OPD>
                           <OUTIN>O</OUTIN>
                          </item>
+=======
+                          <OPD>V_POS</OPD>
+                          <OUTIN>O</OUTIN>
+                         </item>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                         </PLIST>
                         <CODE>File:2fbe2cdb</CODE>
                         <T_CAPTION>
@@ -24976,6 +25048,7 @@
                            <TEXT>
                             <item>
                              <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                              <TDLINE>&amp;V_TEXTO&amp;</TDLINE>
                             </item>
                             <item>
@@ -24983,6 +25056,9 @@
                             </item>
                             <item>
                              <TDFORMAT>P1</TDFORMAT>
+=======
+                             <TDLINE>&lt;C9&gt;&amp;lw_textos-texto&amp;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                             </item>
                            </TEXT>
                            <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>

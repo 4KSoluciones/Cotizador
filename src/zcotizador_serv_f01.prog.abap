@@ -43,6 +43,7 @@ FORM f_pauta_variables_importes.
   ENDIF.
 
   IF gt_pauta_serv IS NOT INITIAL.
+<<<<<<< HEAD
     PERFORM f_obtener_variables."Carga gt_param
     IF gt_pauta_serv IS NOT INITIAL.
     PERFORM f_obtener_variables.
@@ -69,6 +70,9 @@ FORM f_pauta_variables_importes.
     PERFORM f_importe_repuestos.
     PERFORM f_importe_implubri.
   ENDIF.
+=======
+    PERFORM f_obtener_variables.
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
     PERFORM f_importe_repuestos.
     PERFORM f_importe_implubri.
   ENDIF.
@@ -4346,6 +4350,7 @@ ENDFORM.                    " USER_COMMAND_OC
 *&---------------------------------------------------------------------*
 FORM f_crear_orden_compra.
 
+<<<<<<< HEAD
   TYPES: BEGIN OF ty_param_oc,
            tipo  TYPE ztparam_cotserv-tipo,
            valor TYPE ztparam_cotserv-valor1,
@@ -4363,6 +4368,8 @@ FORM f_crear_orden_compra.
   END-OF-DEFINITION.
 
 
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
   DATA: lw_header            TYPE bapimepoheader,
         lw_headerx           TYPE bapimepoheaderx,
         lt_return            TYPE STANDARD TABLE OF bapiret2,
@@ -4385,6 +4392,7 @@ FORM f_crear_orden_compra.
         lv_quantity          TYPE bstmg,
         lv_glaccount         TYPE saknr,
         lv_tabix             TYPE sy-tabix.
+<<<<<<< HEAD
 * Variables para la Solicitud de Pedido automática
   DATA: lv_banfn    TYPE banfn,        " Número de Solped
         lv_bnfpo    TYPE bnfpo,        " Posición de Solped
@@ -4406,6 +4414,12 @@ DATA: lv_bukrs TYPE bukrs,
   FIELD-SYMBOLS <fs_alvoc> TYPE zst_ocalv.
 
   CLEAR:  wa_cotizacion,  lv_pr_found.
+=======
+
+  FIELD-SYMBOLS <fs_alvoc> TYPE zst_ocalv.
+
+  CLEAR wa_cotizacion.
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
 
   READ TABLE gt_alvoc ASSIGNING <fs_alvoc>
     WITH KEY sel = 'X'.
@@ -4433,6 +4447,7 @@ DATA: lv_bukrs TYPE bukrs,
     ENDIF.
   ENDIF.
 
+<<<<<<< HEAD
 get_param 'OC_BUKRS' lv_bukrs '1000'.
   get_param 'OC_BSART' lv_bsart 'ZPP2'.
   get_param 'OC_LIFNR' lv_lifnr 'RSA0'.
@@ -4461,6 +4476,19 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
 *  lw_header-currency   = 'CLP'.
 *  lw_header-doc_date   = sy-datum.
 
+=======
+
+
+  lw_header-comp_code  = '1000'.
+  lw_header-doc_type   = 'ZPP2'.
+  lw_header-creat_date = sy-datum.
+  lw_header-vendor     = 'RSA0'.
+  lw_header-purch_org  = '1000'.
+  lw_header-pur_group  = '107'.
+  lw_header-currency   = 'CLP'.
+  lw_header-doc_date   = sy-datum.
+
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
   lw_headerx-comp_code  = c_mark.
   lw_headerx-doc_type   = c_mark.
   lw_headerx-creat_date = c_mark.
@@ -4471,9 +4499,16 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
   lw_headerx-doc_date   = c_mark.
 
 
+<<<<<<< HEAD
 
 
 * ITEMS
+=======
+* ITEMS
+
+  lv_glaccount = '0021110018'.
+
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
   READ TABLE gt_intervalos INTO DATA(lw_intervalos)
     WITH KEY nro_cotiz = <fs_alvoc>-nro_cotiz
              version   = <fs_alvoc>-version
@@ -4490,6 +4525,7 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
        AND matnr = @lw_intervalos-matnr.
 
     IF sy-subrc = 0.
+<<<<<<< HEAD
 *----------------------------------------------------------------------*
 * PASO CLAVE: Buscar la Solicitud de Pedido automática en VBEP
 *----------------------------------------------------------------------*
@@ -4505,6 +4541,8 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
       ENDIF.
 
 
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
 
       DATA lv_preq_item TYPE vbap-posnr.
       CLEAR: lw_item, lw_itemx, lw_poaccount, lw_poaccountx, lv_quantity.
@@ -4523,12 +4561,16 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
       lw_item-plant       = lw_vbap-werks.
       lw_item-tax_code    = 'C4'.
       lw_item-ref_doc     = lw_vbap-vbeln.
+<<<<<<< HEAD
       lw_item-ref_item    = lw_vbap-posnr.
 
 *   *** REFERENCIA A LA SOLICITUD DE PEDIDO AUTOMÁTICA ***
       lw_item-preq_no     = lv_banfn.          " Número de Solped
       lw_item-preq_item   = lw_vbap-posnr.          " Posición de Solped
 
+=======
+      lw_item-ref_item    = lv_preq_item.
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_item TO lt_item.
 
       lw_itemx-po_item    = lv_pos.
@@ -4541,20 +4583,29 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
       lw_itemx-tax_code   = c_mark.
       lw_itemx-ref_doc    = c_mark.
       lw_itemx-ref_item   = c_mark.
+<<<<<<< HEAD
       lw_itemx-preq_no    = c_mark.
       lw_itemx-preq_item  = c_mark.
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_itemx TO lt_itemx.
 
       lw_poaccount-po_item    = lv_pos.
       lw_poaccount-gl_account = lv_glaccount. "Cuenta de Mayor
+<<<<<<< HEAD
       lw_poaccount-sd_doc     = lw_vbap-vbeln.   " *** NUEVO: Sales Order ***
       lw_poaccount-itm_number = lw_vbap-posnr.   " *** NUEVO: Posición SO ***
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_poaccount TO lt_poaccount.
 
       lw_poaccountx-po_item    = lv_pos.
       lw_poaccountx-gl_account = c_mark.
+<<<<<<< HEAD
       lw_poaccountx-sd_doc     = c_mark.         " *** NUEVO ***
       lw_poaccountx-itm_number = c_mark.         " *** NUEVO ***
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_poaccountx TO lt_poaccountx.
 
       lw_bapimeposchedule-po_item       = lv_pos.
@@ -4580,11 +4631,14 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
       lw_item-net_price   = lw_pautasave-precio_final.
       lw_item-plant       = lw_vbap-werks. "lw_pautasave-werksoc.
       lw_item-tax_code    = 'C4'.
+<<<<<<< HEAD
 
 *   *** REFERENCIA A LA SOLICITUD DE PEDIDO AUTOMÁTICA ***
       lw_item-preq_no     = lv_banfn.          " Número de Solped
       lw_item-preq_item   = lw_vbap-posnr.          " Posición de Solped
 
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_item TO lt_item.
 
       lw_itemx-po_item    = lv_pos.
@@ -4595,20 +4649,29 @@ get_param 'OC_BUKRS' lv_bukrs '1000'.
       lw_itemx-net_price  = c_mark.
       lw_itemx-plant      = c_mark.
       lw_itemx-tax_code   = c_mark.
+<<<<<<< HEAD
       lw_itemx-preq_no    = c_mark.
       lw_itemx-preq_item  = c_mark.
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_itemx TO lt_itemx.
 
       lw_poaccount-po_item    = lv_pos.
       lw_poaccount-gl_account = lv_glaccount. "Cuenta de Mayor
+<<<<<<< HEAD
       lw_poaccount-sd_doc     = lw_vbap-vbeln.   " *** NUEVO: Sales Order ***
       lw_poaccount-itm_number = lw_vbap-posnr.   " *** NUEVO: Posición SO ***
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_poaccount TO lt_poaccount.
 
       lw_poaccountx-po_item    = lv_pos.
       lw_poaccountx-gl_account = c_mark.
+<<<<<<< HEAD
       lw_poaccountx-sd_doc     = c_mark.         " *** NUEVO ***
       lw_poaccountx-itm_number = c_mark.         " *** NUEVO ***
+=======
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
       APPEND lw_poaccountx TO lt_poaccountx.
 
       lw_bapimeposchedule-po_item       = lv_pos.

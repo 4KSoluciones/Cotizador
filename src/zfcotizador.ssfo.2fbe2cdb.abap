@@ -7,6 +7,7 @@ CALL FUNCTION 'CONVERSION_EXIT_ALPHA_OUTPUT'
     output = v_pos.
 
 
+<<<<<<< HEAD
 CLEAR v_texto.
 
 CONCATENATE lw_textos-texto1
@@ -15,6 +16,10 @@ CONCATENATE lw_textos-texto1
             lw_textos-texto4
             lw_textos-texto5
        INTO v_texto SEPARATED BY space.
+=======
+
+
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
 
 
 

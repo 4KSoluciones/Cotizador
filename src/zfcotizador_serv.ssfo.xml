@@ -274,7 +274,11 @@
    <item>
     <NAME>V_TEXTO</NAME>
     <TYPING>TYPE</TYPING>
+<<<<<<< HEAD
     <TYPENAME>STRING</TYPENAME>
+=======
+    <TYPENAME>ZED_TEXTOLARGO</TYPENAME>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
    </item>
    <item>
     <NAME>V_CANT_CONSIDERA</NAME>
@@ -1613,7 +1617,18 @@
                         <TEXT>
                          <item>
                           <TDFORMAT>P2</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>,,,,&lt;C5&gt;Cotización Plan de Mantenimiento: &amp;wa_cotizacion-nro_cotiz&amp; &lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>,,,,&lt;C5&gt;Cotización Plan de Mantenimiento Camiones:</TDLINE>
+                         </item>
+                         <item>
+                          <TDLINE>&amp;wa_cotizacion-nro_cotiz&amp;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+                         </item>
+                         <item>
+                          <TDFORMAT>=</TDFORMAT>
+                          <TDLINE>&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -1639,7 +1654,28 @@
                           <INAME>%TEXT1</INAME>
                           <LINENR>000001</LINENR>
                           <TDFORMAT>P2</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>,,,,&lt;C5&gt;Cotización Plan de Mantenimiento: &amp;wa_cotizacion-nro_cotiz&amp; &lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>,,,,&lt;C5&gt;Cotización Plan de Mantenimiento Camiones:</TDLINE>
+                         </item>
+                         <item>
+                          <SPRAS>S</SPRAS>
+                          <TXTYPE>F</TXTYPE>
+                          <FORMNAME>ZFCOTIZADOR_SERV</FORMNAME>
+                          <INAME>%TEXT1</INAME>
+                          <LINENR>000002</LINENR>
+                          <TDLINE>&amp;wa_cotizacion-nro_cotiz&amp;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt;&lt;C5&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+                         </item>
+                         <item>
+                          <SPRAS>S</SPRAS>
+                          <TXTYPE>F</TXTYPE>
+                          <FORMNAME>ZFCOTIZADOR_SERV</FORMNAME>
+                          <INAME>%TEXT1</INAME>
+                          <LINENR>000003</LINENR>
+                          <TDFORMAT>=</TDFORMAT>
+                          <TDLINE>&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </T_TEXT>
                        </sf:TEXT>
@@ -4945,6 +4981,7 @@
                         <APPMODE>P</APPMODE>
                         <TEXT>
                          <item>
+<<<<<<< HEAD
                           <TDFORMAT>*</TDFORMAT>
                           <TDLINE>&amp;wa_cotizacion-vin&amp;</TDLINE>
                          </item>
@@ -4956,6 +4993,9 @@
                          </item>
                          <item>
                           <TDFORMAT>&amp;</TDFORMAT>
+=======
+                          <TDFORMAT>P1</TDFORMAT>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -8464,11 +8504,15 @@
                         <TEXT>
                          <item>
                           <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>,,,,,,,,,,,,&lt;C6&gt;Detalle Valores Kit de Mantenimiento</TDLINE>
                          </item>
                          <item>
                           <TDFORMAT>P1</TDFORMAT>
                           <TDLINE>&lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>,,,,,,,,,,,,&lt;C6&gt;Detalle Valores Mantenimiento&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -8493,6 +8537,7 @@
                           <INAME>TXT_TITULO_DETALLE</INAME>
                           <LINENR>000001</LINENR>
                           <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>,,,,,,,,,,,,&lt;C6&gt;Detalle Valores Kit de Mantenimiento</TDLINE>
                          </item>
                          <item>
@@ -8503,6 +8548,9 @@
                           <LINENR>000002</LINENR>
                           <TDFORMAT>P1</TDFORMAT>
                           <TDLINE>&lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>,,,,,,,,,,,,&lt;C6&gt;Detalle Valores Mantenimiento&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </T_TEXT>
                        </sf:TEXT>
@@ -16252,7 +16300,14 @@
                          </item>
                          <item>
                           <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>&lt;C7&gt; &lt;769&gt; : Si Considera&lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>&lt;C7&gt; &lt;769&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt; : Si</TDLINE>
+                         </item>
+                         <item>
+                          <TDLINE>Considera&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </TEXT>
                         <STYLE_NAME>ZSTYLE_COTIZADOR</STYLE_NAME>
@@ -16287,7 +16342,19 @@
                           <INAME>CONSIDERA</INAME>
                           <LINENR>000002</LINENR>
                           <TDFORMAT>P1</TDFORMAT>
+<<<<<<< HEAD
                           <TDLINE>&lt;C7&gt; &lt;769&gt; : Si Considera&lt;/&gt;</TDLINE>
+=======
+                          <TDLINE>&lt;C7&gt; &lt;769&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt;&lt;C7&gt; : Si</TDLINE>
+                         </item>
+                         <item>
+                          <SPRAS>S</SPRAS>
+                          <TXTYPE>F</TXTYPE>
+                          <FORMNAME>ZFCOTIZADOR_SERV</FORMNAME>
+                          <INAME>CONSIDERA</INAME>
+                          <LINENR>000003</LINENR>
+                          <TDLINE>Considera&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</TDLINE>
+>>>>>>> f4828c08b87a06e14a1077854a3bc4ecad278ae6
                          </item>
                         </T_TEXT>
                        </sf:TEXT>
